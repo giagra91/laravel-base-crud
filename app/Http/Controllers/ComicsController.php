@@ -43,7 +43,7 @@ class ComicsController extends Controller
         $comic->description = $data["description"];
         $comic->thumb = $data["thumb"];
         $comic->price = $data["price"];
-        $comic->series = $data["sale_date"];
+        $comic->series = $data["series"];
         $comic->sale_date = $data["sale_date"];
         $comic->type = $data["type"];
         $comic->save();
