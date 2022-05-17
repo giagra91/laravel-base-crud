@@ -5,9 +5,12 @@
 @section('main-content')
     <div class="container">
         <div class="row g-2">
+            <div class="col-12 text-center">
+                <a href="{{route("comics.create")}}" class="btn btn-warning">Add new comic</a>
+            </div>
             @foreach ($comics as $comic)
-                <div class="col-4">
-                    <div class="card" style="width: 18rem;">
+                <div class="col-4 text-center">
+                    <div class="card p-3" style="width: 18rem;">
                         <img class="card-img-top" src="{{ $comic->thumb }}" alt="{{ $comic->series }}">
                         <div class="card-body">
                             <h5 class="card-title">{{ $comic->series }}</h5>
