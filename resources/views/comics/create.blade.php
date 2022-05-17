@@ -19,7 +19,7 @@
                     <input type="text" name="thumb" id="thumb" placeholder="Thumb">
                 
                     <label for="price">Price</label>
-                    <input type="number" name="price" id="price" placeholder="Price">
+                    <input type="number" name="price" id="price" step="0.01" placeholder="Price">
                     
                     <label for="series">Series</label>
                     <input type="text" name="series" id="series" placeholder="Series">
