@@ -15,6 +15,7 @@
                         <div class="card-body">
                             <h5 class="card-title">{{ $comic->series }}</h5>
                             <p class="card-text">{{ substr($comic->description, 0, 50) . "..." }}</p>
+                            <p>Price: €{{ $comic->price }}</p>
                             <a href="{{route("comics.show", $comic->id)}}" class="btn btn-primary">View Infos</a>
                         </div>
                     </div>
