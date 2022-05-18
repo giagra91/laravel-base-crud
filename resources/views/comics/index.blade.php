@@ -8,10 +8,12 @@
             <div class="col-12 text-center">
                 <a href="{{route("comics.create")}}" class="btn btn-warning">Add new comic</a>
             </div>
+        </div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
             @foreach ($comics as $comic)
-                <div class="col-4 text-center">
+                <div class="col text-center">
                     <div class="card p-3" style="width: 18rem;">
-                        <img class="card-img-top" src="{{ $comic->thumb }}" alt="{{ $comic->series }}">
+                        <img class="card-img-top img-fluid" src="{{ $comic->thumb }}" alt="{{ $comic->series }}">
                         <div class="card-body">
                             <h5 class="card-title">{{ $comic->series }}</h5>
                             <p class="card-text">{{ substr($comic->description, 0, 50) . "..." }}</p>
