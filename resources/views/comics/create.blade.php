@@ -11,6 +11,12 @@
                 
                     <label for="title">Title</label>
                     <input type="text" name="title" id="title" placeholder="Title">
+                    @error('title')
+                    <div class="alert alert-danger">
+                        {{ $message }}
+                    </div>
+                        
+                    @enderror
                 
                     <label for="description">Description</label>
                     <input type="text" name="description" id="description" placeholder="Description">
