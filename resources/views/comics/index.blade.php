@@ -6,7 +6,7 @@
     <div class="container">
         <div class="row g-2">
             <div class="col-12 text-center">
-                <a href="{{route("comics.create")}}" class="btn btn-warning">Add new comic</a>
+                <a href="{{route("comics.create")}}" class="btn btn-success mb-2">Add new comic</a>
             </div>
         </div>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
@@ -19,6 +19,7 @@
                             <p class="card-text">{{ substr($comic->description, 0, 50) . "..." }}</p>
                             <p>Price: €{{ $comic->price }}</p>
                             <a href="{{route("comics.show", $comic->id)}}" class="btn btn-primary">View Infos</a>
+                            <a href="{{route("comics.edit", $comic->id)}}" class="btn btn-warning">Edit</a>
                         </div>
                     </div>
                 </div>

@@ -40,11 +40,11 @@ class ComicsController extends Controller
 
         $request->validate([
             "title"=> "required|min:5",
-            "description"=> "required",
+            "description"=> "required|min:15",
             "thumb"=> "required",
             "price"=> "required|numeric",
             "series"=> "required",
-            "sale_date"=> "required",
+            "sale_date"=> "required|date",
             "type" => "required"
         ],
         [
@@ -62,7 +62,7 @@ class ComicsController extends Controller
         $comic->type = $data["type"];
         $comic->save();
         
-        return redirect()->route("comics.show", $comic);
+        return redirect()->route("comics.show", $comic)->with;
     }
 
     /**
@@ -85,7 +85,8 @@ class ComicsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $comic= Comic::findOrFail($id);
+        return view("comics.edit", ["comic" => $comic]);
     }
 
     /**
