@@ -46,7 +46,11 @@ class ComicsController extends Controller
             "series"=> "required",
             "sale_date"=> "required",
             "type" => "required"
-        ]);
+        ],
+        [
+            "required" => "Non è possibile inserire un nuovo comic senza :attribute",
+        ]
+        );
 
         $comic = new Comic();
         $comic->title = $data["title"];
